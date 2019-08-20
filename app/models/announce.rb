@@ -2,7 +2,7 @@ class Announce < ApplicationRecord
   belongs_to :user
   mount_uploader :photo, PhotoUploader
   STATE = ["Comme neuf", "Excellent", "Bon état", "Fonctionnel"]
-  PRICES = ["1€","2€","3€","4€","5€","6€","7€","8€","9€","10€"]
+  PRICES = ["1€", "2€", "3€", "4€", "5€", "6€", "7€", "8€", "9€", "10€"]
   validates :model, uniqueness: true, presence: true
   validates :brand, presence: true
   validates :state, presence: true, inclusion: { in: STATE }
